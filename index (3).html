@@ -1,0 +1,137 @@
+
+<style>
+  .inf-wrap { font-family: var(--font-sans); padding: 1.5rem 1rem; max-width: 680px; }
+  .inf-header { background: #3B6D11; border-radius: 12px; padding: 1.2rem 1.5rem; margin-bottom: 1rem; }
+  .inf-header h1 { color: #EAF3DE; font-size: 15px; font-weight: 500; margin: 0 0 4px; line-height: 1.4; }
+  .inf-header p { color: #C0DD97; font-size: 12px; margin: 0; }
+  .inf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+  .inf-card { background: #EAF3DE; border-radius: 12px; padding: 0.9rem 1rem; border: 0.5px solid #C0DD97; }
+  .inf-card-dark { background: #27500A; border-radius: 12px; padding: 0.9rem 1rem; }
+  .inf-card-mid { background: #639922; border-radius: 12px; padding: 0.9rem 1rem; }
+  .inf-card h2 { color: #27500A; font-size: 12px; font-weight: 500; margin: 0 0 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .inf-card p { color: #3B6D11; font-size: 12.5px; margin: 0; line-height: 1.5; }
+  .inf-card-dark h2 { color: #C0DD97; font-size: 12px; font-weight: 500; margin: 0 0 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .inf-card-dark p { color: #EAF3DE; font-size: 12.5px; margin: 0; line-height: 1.5; }
+  .inf-card-mid h2 { color: #EAF3DE; font-size: 12px; font-weight: 500; margin: 0 0 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .inf-card-mid p { color: #EAF3DE; font-size: 12.5px; margin: 0; line-height: 1.5; }
+  .stat-row { display: flex; gap: 8px; margin-bottom: 10px; }
+  .stat-box { flex: 1; background: #3B6D11; border-radius: 10px; padding: 0.7rem 0.8rem; text-align: center; }
+  .stat-box .num { color: #C0DD97; font-size: 18px; font-weight: 500; display: block; line-height: 1.2; }
+  .stat-box .lbl { color: #EAF3DE; font-size: 11px; line-height: 1.3; display: block; margin-top: 2px; }
+  .tipos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+  .tipo-card { border-radius: 10px; padding: 0.75rem 0.9rem; }
+  .tipo-card.t1 { background: #27500A; }
+  .tipo-card.t2 { background: #3B6D11; }
+  .tipo-card.t3 { background: #639922; }
+  .tipo-card.t4 { background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .tipo-card h3 { font-size: 12px; font-weight: 500; margin: 0 0 3px; }
+  .tipo-card.t1 h3, .tipo-card.t2 h3, .tipo-card.t3 h3 { color: #C0DD97; }
+  .tipo-card.t4 h3 { color: #27500A; }
+  .tipo-card p { font-size: 11.5px; margin: 0; line-height: 1.4; }
+  .tipo-card.t1 p, .tipo-card.t2 p, .tipo-card.t3 p { color: #EAF3DE; }
+  .tipo-card.t4 p { color: #3B6D11; }
+  .result-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+  .result-item { background: #EAF3DE; border-radius: 10px; padding: 0.7rem 0.8rem; border-left: 4px solid #639922; }
+  .result-item .area { color: #27500A; font-size: 11px; font-weight: 500; margin: 0 0 4px; }
+  .result-item .val { color: #3B6D11; font-size: 11.5px; margin: 0; line-height: 1.4; }
+  .full-card { border-radius: 12px; padding: 0.9rem 1rem; margin-bottom: 10px; background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .full-card h2 { color: #27500A; font-size: 12px; font-weight: 500; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .full-card p { color: #3B6D11; font-size: 12.5px; margin: 0; line-height: 1.5; }
+  .ranking-row { display: flex; gap: 8px; margin-top: 8px; }
+  .rank-item { flex: 1; background: #fff; border-radius: 8px; padding: 0.5rem 0.7rem; border: 0.5px solid #C0DD97; text-align: center; }
+  .rank-item .medal { font-size: 16px; display: block; }
+  .rank-item .rname { color: #27500A; font-size: 11px; font-weight: 500; display: block; margin-top: 2px; }
+  .rank-item .rdesc { color: #639922; font-size: 10.5px; display: block; }
+  .footer { background: #173404; border-radius: 10px; padding: 0.8rem 1rem; }
+  .footer p { color: #97C459; font-size: 11.5px; margin: 0; line-height: 1.5; }
+  .badge { display: inline-block; background: #639922; color: #EAF3DE; border-radius: 20px; font-size: 10.5px; padding: 2px 9px; margin: 2px 2px 0 0; }
+  .badge-red { display: inline-block; background: #27500A; color: #C0DD97; border-radius: 20px; font-size: 10.5px; padding: 2px 9px; margin: 2px 2px 0 0; }
+</style>
+
+<div class="inf-wrap">
+
+  <div class="inf-header">
+    <h1>Efectividad comparativa de intervenciones de actividad física en funciones cognitivas de niños con trastornos del neurodesarrollo</h1>
+    <p>Revisión sistemática y meta-análisis de red · Tao, Yang, Wilson, Chang, Liu & Sit (2025) · Int J Behav Nutr Phys Act</p>
+  </div>
+
+  <div class="inf-grid">
+    <div class="inf-card">
+      <h2>¿Qué son los TND?</h2>
+      <p>Trastornos del neurodesarrollo (TND): TDAH, TEA, discapacidad intelectual, trastornos del aprendizaje y del movimiento. Afectan al 15% de los niños mundialmente, con déficits en atención, memoria y funciones ejecutivas.</p>
+    </div>
+    <div class="inf-card-dark">
+      <h2>Objetivo</h2>
+      <p>Comparar la efectividad de distintos tipos de actividad física sobre las funciones cognitivas en niños y adolescentes con TND, usando meta-análisis de red para jerarquizar las intervenciones.</p>
+    </div>
+  </div>
+
+  <div class="inf-card" style="margin-bottom:10px;">
+    <h2>¿Cómo se desarrolló?</h2>
+    <p>Búsqueda en 7 bases de datos (Web of Science, PubMed, Medline, PsycINFO, Embase, CINAHL, SPORTDiscus) hasta septiembre 2023, siguiendo lineamientos PRISMA. Solo se incluyeron ensayos controlados aleatorizados (ECAs). Registrado en PROSPERO (CRD42023409606).</p>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-box"><span class="num">7.067</span><span class="lbl">registros iniciales</span></div>
+    <div class="stat-box"><span class="num">31</span><span class="lbl">ECAs incluidos</span></div>
+    <div class="stat-box"><span class="num">1.403</span><span class="lbl">participantes</span></div>
+    <div class="stat-box"><span class="num">5–17</span><span class="lbl">años de edad</span></div>
+    <div class="stat-box"><span class="num">66</span><span class="lbl">brazos de intervención</span></div>
+  </div>
+
+  <div class="full-card">
+    <h2>Tipos de actividad física evaluados</h2>
+    <div class="tipos-grid">
+      <div class="tipo-card t1">
+        <h3>Ejercicio mente-cuerpo (EMC)</h3>
+        <p>Movimientos controlados + meditación: yoga, Tai Chi, Qigong. Mayor efecto en atención.</p>
+      </div>
+      <div class="tipo-card t2">
+        <h3>Exergaming</h3>
+        <p>Videojuegos activos con movimiento corporal (Nintendo Wii, Xbox Kinect). Mayor efecto en memoria y funciones ejecutivas.</p>
+      </div>
+      <div class="tipo-card t3">
+        <h3>Actividad física multicomponente (AFM)</h3>
+        <p>Combinación de más de un tipo de actividad (ej. deportes de raqueta). Efectiva en todas las poblaciones.</p>
+      </div>
+      <div class="tipo-card t4">
+        <h3>Ejercicio aeróbico (EA)</h3>
+        <p>Correr, ciclismo, caminata. No mostró efectos significativos en ningún dominio cognitivo.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-card">
+    <h2>Resultados principales por dominio cognitivo</h2>
+    <div class="result-grid">
+      <div class="result-item">
+        <p class="area">Atención</p>
+        <p class="val">EMC (SMD=1.91) y exergaming (SMD=1.58) mostraron mejoras grandes y significativas</p>
+      </div>
+      <div class="result-item">
+        <p class="area">Memoria</p>
+        <p class="val">Exergaming tuvo el mayor efecto (SMD=0.97). En TDAH específicamente, solo la AFM fue significativa</p>
+      </div>
+      <div class="result-item">
+        <p class="area">Funciones ejecutivas</p>
+        <p class="val">Exergaming (SMD=0.94), EMC (SMD=0.92) y AFM (SMD=0.79) superaron al cuidado habitual</p>
+      </div>
+    </div>
+    <div class="ranking-row">
+      <div class="rank-item"><span class="medal">🥇</span><span class="rname">EMC</span><span class="rdesc">Mejor para atención</span></div>
+      <div class="rank-item"><span class="medal">🥇</span><span class="rname">Exergaming</span><span class="rdesc">Mejor para memoria y EF</span></div>
+      <div class="rank-item"><span class="medal">🥈</span><span class="rname">AFM</span><span class="rdesc">Consistente en todos los TND</span></div>
+      <div class="rank-item"><span class="medal">❌</span><span class="rname">Ejercicio aeróbico</span><span class="rdesc">Sin efecto significativo</span></div>
+    </div>
+  </div>
+
+  <div class="inf-card-mid" style="margin-bottom:10px;">
+    <h2>Conclusión</h2>
+    <p>El EMC, el exergaming y la AFM son las intervenciones más efectivas para mejorar funciones cognitivas específicas en niños con TND. El ejercicio aeróbico no mostró efectividad significativa. La AFM es la única con efectos consistentes tanto en TDAH como en TEA. Se necesitan ECAs con comparaciones directas para confirmar estos hallazgos.</p>
+  </div>
+
+  <div class="footer">
+    <p>Fuente: Tao R, Yang Y, Wilson M, Chang JR, Liu C, Sit CHP. Comparative effectiveness of physical activity interventions on cognitive functions in children and adolescents with Neurodevelopmental Disorders. <em>Int J Behav Nutr Phys Act</em>. 2025;22:6. https://doi.org/10.1186/s12966-024-01702-7</p>
+  </div>
+
+</div>
